@@ -11,7 +11,7 @@ include_once('./classes/database/ADODB_base.php');
 
 class Postgres extends ADODB_base {
 
-	var $major_version = 14;
+	var $major_version = 16;
 	// Max object name length
 	var $_maxNameLen = 63;
 	// Store the current schema
@@ -8062,7 +8062,7 @@ class Postgres extends ADODB_base {
 	function hasQueryCancel() { return true; }
 	function hasTablespaces() { return true; }
 	function hasUserRename() { return true; }
-    function hasUserSignals() { return true; }
+	function hasUserSignals() { return true; }
 	function hasVirtualTransactionId() { return true; }
 	function hasAlterDatabase() { return $this->hasAlterDatabaseRename(); }
 	function hasDatabaseCollation() { return true; }
